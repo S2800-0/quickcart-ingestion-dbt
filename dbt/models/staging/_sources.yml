@@ -4,11 +4,11 @@ sources:
   - name: raw
     description: Raw tables as loaded into the warehouse, untouched (by Airbyte on PostgreSQL, by Fivetran on Snowflake).
     database: "{{ target.database if target.type == 'snowflake' else none }}"
-    schema: "{{ 'NEON_CLASSROOM_PUBLIC' if target.type == 'snowflake' else 'raw' }}"
+    schema: "{{ 'PUBLIC' if target.name == 'snowflake_airbyte' else ('NEON_CLASSROOM_PUBLIC' if target.type == 'snowflake' else 'raw') }}"
     tables:
       - name: customers
       - name: orders
-        loaded_at_field: "{{ '_fivetran_synced' if target.type == 'snowflake' else '_airbyte_extracted_at' }}"
+        loaded_at_field: "{{ '_airbyte_extracted_at' if target.name != 'snowflake' else '_fivetran_synced' }}"
         freshness:
           warn_after: {count: 2, period: day}
       - name: order_items

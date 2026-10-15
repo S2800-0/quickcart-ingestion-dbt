@@ -25,3 +25,15 @@ quickcart:
       database: FIVETRAN_DATABASE
       schema: ANALYTICS
       threads: 4
+
+    # The same models on the tables Airbyte Cloud loaded into AIRBYTE_DATABASE.
+    snowflake_airbyte:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT', 'srsbxdh-uf12982') }}"
+      user: AIRBYTE_USER
+      private_key_path: "{{ env_var('AIRBYTE_PRIVATE_KEY_PATH', env_var('HOME') ~ '/.quickcart_keys/airbyte_key.p8') }}"
+      role: AIRBYTE_ROLE
+      warehouse: AIRBYTE_WAREHOUSE
+      database: AIRBYTE_DATABASE
+      schema: ANALYTICS
+      threads: 4

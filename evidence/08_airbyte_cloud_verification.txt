@@ -1,0 +1,53 @@
+$ snow sql -c airbyte_check   # as AIRBYTE_USER, role AIRBYTE_ROLE, after the first Airbyte Cloud sync (615 records)
+select table_schema, table_name, row_count from AIRBYTE_DATABASE.information_schema.tables
++-------------------------------------------+
+| TABLE_SCHEMA | TABLE_NAME     | ROW_COUNT |
+|--------------+----------------+-----------|
+| PUBLIC       | CUSTOMERS      | 100       |
+| PUBLIC       | EMPLOYEES      | 100       |
+| PUBLIC       | ORDERS         | 105       |
+| PUBLIC       | ORDER_ITEMS    | 107       |
+| PUBLIC       | PRODUCTS       | 100       |
+| PUBLIC       | STORES         | 100       |
+| PUBLIC       | STUDENT_ORDERS | 3         |
++-------------------------------------------+
+
+SELECT * FROM AIRBYTE_DATABASE.PUBLIC.STUDENT_ORDERS ORDER BY ORDER_ID
++-------------------------------------------------------------------+
+| ORDER_ID | CUSTOMER_NAME | PRODUCT  | ORDER_AMOUNT | ORDER_STATUS |
+|----------+---------------+----------+--------------+--------------|
+| 1        | Mona          | Keyboard | 45.0         | completed    |
+| 2        | Omar          | Monitor  | 180.0        | completed    |
+| 3        | Salma         | Mouse    | 22.5         | pending      |
++-------------------------------------------------------------------+
+
+Same totals on both sides (orders | shipping total | lines | lines total)
+Snowflake: 105 | 512.27 | 107 | 74976.38
+Neon:      105 | 512.27 | 107 | 74976.38
+
+--- after the second sync (7 records loaded: 3 orders, 4 order lines) ---
+--- after the second sync (7 records loaded: 3 orders, 4 order lines) ---
++----------------------------------------+
+| ORDERS | ORDER_ITEMS | DISTINCT_ORDERS |
+|--------+-------------+-----------------|
+| 108    | 111         | 108             |
++----------------------------------------+
+select order_id, order_date, status, shipping_fee, _airbyte_extracted_at from AIRBYTE_DATABASE.PUBLIC.ORDERS where order_id > 103 order by 1
++-------------------------------------------------------------------------------------+
+| ORDER_ID | ORDER_DATE | STATUS    | SHIPPING_FEE | _AIRBYTE_EXTRACTED_AT            |
+|----------+------------+-----------+--------------+----------------------------------|
+| 104      | 2026-01-06 | Cancelled | 0.0          | 2026-10-15 18:17:46.037000+00:00 |
+| 105      | 2026-01-07 | Delivered | 0.0          | 2026-10-15 18:17:46.037000+00:00 |
+| 106      | 2026-01-08 | Delivered | 0.0          | 2026-10-15 18:27:10.101000+00:00 |
+| 107      | 2026-01-08 | Shipped   | 5.99         | 2026-10-15 18:27:10.101000+00:00 |
+| 108      | 2026-01-09 | Pending   | 5.99         | 2026-10-15 18:27:10.101000+00:00 |
++-------------------------------------------------------------------------------------+
+
+Same totals on both sides  (orders | shipping total | lines | lines total)
+Snowflake: 108 524.25 111 75603.62
+Neon:      108 | 524.25 | 111 | 75603.62
+
+$ dbt build --target snowflake_airbyte
+Finished running 5 table models, 29 data tests, 6 view models in 0 hours 0 minutes and 6.26 seconds (6.26s).
+Completed successfully
+Done. PASS=40 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=40

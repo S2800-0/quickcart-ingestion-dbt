@@ -4,7 +4,7 @@ QuickCart is a growing e-commerce company that needs an ingestion strategy. This
 
 1. A one page recommendation for the CTO: **Fivetran or Airbyte Open Source** (`docs/QuickCart_Ingestion_Recommendation.docx`).
 2. A working proof of the recommended design: Airbyte's PostgreSQL connectors move data from a source database to a warehouse, and dbt turns the raw tables into tested reporting tables.
-3. The cloud lab from the course manuals, run for real: **Neon PostgreSQL to Fivetran to Snowflake**, with the same dbt project running on Snowflake (see "Cloud run" below).
+3. Both cloud labs from the course manuals, run for real: **Neon PostgreSQL to Fivetran to Snowflake** and **Neon PostgreSQL to Airbyte Cloud to Snowflake**, with the same dbt project running on all the resulting warehouses (see "Cloud run" and "Airbyte Cloud run" below).
 
 ## The recommendation in short
 
@@ -103,7 +103,7 @@ Neon PostgreSQL  ->  Fivetran (query based sync)  ->  Snowflake FIVETRAN_DATABAS
 | Incremental | 5 orders and 7 lines added to Neon, Fivetran synced again, Snowflake went to 105 orders and 107 lines with no duplicates. Only the new rows have a new `_fivetran_synced` time. |
 | dbt | `dbt build --target snowflake`: 40 of 40 pass on Snowflake, and the same 40 pass on PostgreSQL. |
 
-To run dbt on Snowflake, keep the private key outside the repo and point `SNOWFLAKE_PRIVATE_KEY_PATH` at it (default `~/.quickcart_keys/rsa_key.p8`):
+To run dbt on Snowflake (`--target snowflake` for the Fivetran data, `--target snowflake_airbyte` for the Airbyte data), keep the private keys outside the repo and point `SNOWFLAKE_PRIVATE_KEY_PATH` at it (default `~/.quickcart_keys/rsa_key.p8`):
 
 ```bash
 cd dbt && DBT_PROFILES_DIR=$PWD ../.venv/bin/dbt build --target snowflake
@@ -116,6 +116,37 @@ cd dbt && DBT_PROFILES_DIR=$PWD ../.venv/bin/dbt build --target snowflake
 ![Snowflake matches Neon](screenshots/10_snowflake_verification.png)
 
 ![Second sync and dbt on Snowflake](screenshots/11_snowflake_incremental_and_dbt.png)
+
+## Airbyte Cloud run: Neon, Airbyte Cloud and Snowflake
+
+The Airbyte manual was run end to end too, into its own Snowflake database, so the two ingestion tools can be compared on the same source.
+
+```
+Neon PostgreSQL  ->  Airbyte Cloud (xmin incremental)  ->  Snowflake AIRBYTE_DATABASE.PUBLIC  ->  dbt (target: snowflake_airbyte)
+7 tables                                                  AIRBYTE_ROLE, AIRBYTE_USER (key pair)     staging, marts, 40 tests
+```
+
+| Step | What was done |
+|---|---|
+| Snowflake | `AIRBYTE_ROLE`, service user `AIRBYTE_USER` with key pair login, XSMALL warehouse that suspends after 60 seconds, `AIRBYTE_DATABASE` (`sql/04_snowflake_airbyte_setup.sql`). |
+| Airbyte source | `neon_classroom_source`: Postgres, SSL `require`, update method **xmin**, schema `public`. |
+| Airbyte destination | `snowflake_classroom_destination`: key pair login, role, warehouse and database as above, default schema `PUBLIC`. |
+| Connection | All 7 streams, replicate source, manual schedule. The first sync loaded 615 records. |
+| Check | Snowflake matches Neon: 105 orders, shipping total 512.27, 107 order lines, line total 74976.38, and the 3 `student_orders` rows. |
+| Incremental | 3 orders and 4 lines added to Neon (`sql/05_more_orders.sql`). The second sync loaded only 7 records, and Snowflake went to 108 orders and 111 lines with no duplicates. |
+| dbt | `dbt build --target snowflake_airbyte`: 40 of 40 pass. |
+
+![Airbyte streams](screenshots/13_airbyte_select_streams.png)
+
+![Airbyte first sync](screenshots/14_airbyte_first_sync.png)
+
+![Airbyte timeline](screenshots/15_airbyte_timeline.png)
+
+![Snowflake after Airbyte](screenshots/16_airbyte_snowflake_verification.png)
+
+Problem found: the first destination test failed with "Schema AIRBYTE_DATABASE.PUBLIC does not exist or not authorized". The manual's script gives `AIRBYTE_ROLE` ownership of the database, but the `PUBLIC` schema inside it stayed owned by `SYSADMIN`. Granting ownership of that schema to `AIRBYTE_ROLE` fixed it (last lines of `sql/04_snowflake_airbyte_setup.sql`).
+
+![The destination error](screenshots/12_airbyte_destination_schema_error.png)
 
 ## Results (local Airbyte run)
 
@@ -158,7 +189,7 @@ Raw logs are in `evidence/`.
 
 ## Limits
 
-- The local Airbyte run uses PostgreSQL as the warehouse. The cloud run uses Fivetran, because the Fivetran manual was the one run on real accounts. The Airbyte Cloud manual was not run. Pointing the Airbyte connectors at Neon and Snowflake would mainly change the two config files in `airbyte/`.
+- The local Airbyte run uses PostgreSQL as the warehouse and has no web interface. The two cloud runs (Fivetran and Airbyte Cloud) use real Neon and Snowflake accounts.
 - The custom inventory API in the brief has no documentation and no access, so it is covered in the recommendation but not built.
 - Fivetran's soft delete columns (`_fivetran_deleted`) are not used in the staging models, because the demo data has no deletes.
 - The data is 100 rows per table, so this proves the design, not the 80M updates a month volume.
