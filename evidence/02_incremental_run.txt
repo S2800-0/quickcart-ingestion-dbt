@@ -1,0 +1,30 @@
+$ psql ... -f sql/02_new_orders.sql   # 5 new orders arrive in production
+INSERT 0 5
+INSERT 0 7
+ orders_in_source 
+------------------
+              105
+(1 row)
+
+$ ./run_pipeline.sh   # second run, incremental
+== 1. Airbyte sync: source -> warehouse (raw)
+Sync finished in 6.1s
+stream          mode          records read
+customers       full refresh  100
+employees       full refresh  100
+order_items     incremental   7
+orders          incremental   5
+products        full refresh  100
+stores          full refresh  100
+student_orders  full refresh  3
+total records: 415
+
+== 2. dbt build: staging, marts and tests
+Finished running 5 table models, 29 data tests, 6 view models in 0 hours 0 minutes and 0.44 seconds (0.44s).
+Completed successfully
+Done. PASS=40 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=40
+
+== 3. dbt source freshness
+1 of 1 START freshness of raw.orders ........................................... [RUN]
+1 of 1 PASS freshness of raw.orders ............................................ [PASS in 0.01s]
+Done.

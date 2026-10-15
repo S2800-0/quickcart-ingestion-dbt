@@ -1,0 +1,11 @@
+       t        | count 
+----------------+-------
+ stores         |   100
+ employees      |   100
+ customers      |   100
+ products       |   100
+ orders         |   100
+ order_items    |   100
+ student_orders |     3
+(7 rows)
+

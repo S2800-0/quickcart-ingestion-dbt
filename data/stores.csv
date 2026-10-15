@@ -1,0 +1,101 @@
+store_id,store_name,city,state,region,opening_date
+1,New York Market,New York,New York,East,2007-07-02
+2,Boston Central,Boston,Massachusetts,East,2021-08-19
+3,Miami Superstore,Miami,Florida,East,2010-06-30
+4,Los Angeles Plaza,Los Angeles,California,West,2008-02-18
+5,San Francisco Square,San Francisco,California,West,2007-04-20
+6,Seattle Market,Seattle,Washington,West,2021-08-12
+7,Chicago Station,Chicago,Illinois,North,2017-03-26
+8,Minneapolis Downtown,Minneapolis,Minnesota,North,2018-03-31
+9,Dallas South Branch,Dallas,Texas,South,2005-09-18
+10,Atlanta Central,Atlanta,Georgia,South,2007-02-07
+11,New York Plaza,New York,New York,East,2010-03-21
+12,Boston Crossing,Boston,Massachusetts,East,2018-07-03
+13,Miami Central,Miami,Florida,East,2017-08-03
+14,Los Angeles Plaza,Los Angeles,California,West,2021-01-22
+15,San Francisco Market,San Francisco,California,West,2020-09-24
+16,Seattle Crossing,Seattle,Washington,West,2014-05-30
+17,Chicago Plaza,Chicago,Illinois,North,2015-01-28
+18,Minneapolis Junction,Minneapolis,Minnesota,North,2011-03-29
+19,Dallas Heights,Dallas,Texas,South,2005-02-23
+20,Atlanta Heights,Atlanta,Georgia,South,2023-01-28
+21,New York Mall,New York,New York,East,2020-08-29
+22,Boston South Branch,Boston,Massachusetts,East,2012-08-19
+23,Miami Superstore,Miami,Florida,East,2008-06-27
+24,Los Angeles Plaza,Los Angeles,California,West,2022-02-15
+25,San Francisco North Branch,San Francisco,California,West,2007-04-18
+26,Seattle Downtown,Seattle,Washington,West,2013-07-10
+27,Chicago Downtown,Chicago,Illinois,North,2013-01-19
+28,Minneapolis Commons,Minneapolis,Minnesota,North,2012-09-18
+29,Dallas Junction,Dallas,Texas,South,2010-12-07
+30,Atlanta Heights,Atlanta,Georgia,South,2005-12-22
+31,New York Square,New York,New York,East,2015-04-22
+32,Boston Crossing,Boston,Massachusetts,East,2007-10-20
+33,Miami Station,Miami,Florida,East,2013-06-28
+34,Los Angeles Downtown,Los Angeles,California,West,2017-05-20
+35,San Francisco Superstore,San Francisco,California,West,2023-08-09
+36,Seattle Market,Seattle,Washington,West,2018-11-15
+37,Chicago Station,Chicago,Illinois,North,2013-02-10
+38,Minneapolis Junction,Minneapolis,Minnesota,North,2009-04-25
+39,Dallas Square,Dallas,Texas,South,2006-07-24
+40,Atlanta Central,Atlanta,Georgia,South,2019-11-01
+41,New York Plaza,New York,New York,East,2022-05-04
+42,Boston Superstore,Boston,Massachusetts,East,2006-10-16
+43,Miami Commons,Miami,Florida,East,2010-03-23
+44,Los Angeles Commons,Los Angeles,California,West,2007-04-08
+45,San Francisco South Branch,San Francisco,California,West,2011-03-28
+46,Seattle Outlet,Seattle,Washington,West,2019-04-05
+47,Chicago Commons,Chicago,Illinois,North,2013-03-08
+48,Minneapolis Mall,Minneapolis,Minnesota,North,2013-04-21
+49,Dallas North Branch,Dallas,Texas,South,2009-09-13
+50,Atlanta Market,Atlanta,Georgia,South,2010-12-28
+51,New York Square,New York,New York,East,2020-05-01
+52,Boston Market,Boston,Massachusetts,East,2006-08-08
+53,Miami Junction,Miami,Florida,East,2019-03-30
+54,Los Angeles Mall,Los Angeles,California,West,2016-12-24
+55,San Francisco Square,San Francisco,California,West,2010-06-29
+56,Seattle Mall,Seattle,Washington,West,2015-05-15
+57,Chicago South Branch,Chicago,Illinois,North,2011-01-21
+58,Minneapolis Station,Minneapolis,Minnesota,North,2019-05-10
+59,Dallas Square,Dallas,Texas,South,2017-06-29
+60,Atlanta Plaza,Atlanta,Georgia,South,2020-05-10
+61,New York North Branch,New York,New York,East,2023-11-27
+62,Boston Heights,Boston,Massachusetts,East,2022-05-28
+63,Miami Central,Miami,Florida,East,2010-02-20
+64,Los Angeles Commons,Los Angeles,California,West,2005-09-20
+65,San Francisco Heights,San Francisco,California,West,2012-01-29
+66,Seattle South Branch,Seattle,Washington,West,2011-01-03
+67,Chicago Downtown,Chicago,Illinois,North,2009-09-25
+68,Minneapolis Station,Minneapolis,Minnesota,North,2017-09-21
+69,Dallas Station,Dallas,Texas,South,2021-02-07
+70,Atlanta North Branch,Atlanta,Georgia,South,2009-10-08
+71,New York Market,New York,New York,East,2016-03-13
+72,Boston South Branch,Boston,Massachusetts,East,2019-06-03
+73,Miami Outlet,Miami,Florida,East,2008-03-16
+74,Los Angeles Superstore,Los Angeles,California,West,2008-02-18
+75,San Francisco Plaza,San Francisco,California,West,2021-09-16
+76,Seattle Crossing,Seattle,Washington,West,2017-02-02
+77,Chicago Superstore,Chicago,Illinois,North,2021-10-03
+78,Minneapolis Junction,Minneapolis,Minnesota,North,2014-08-11
+79,Dallas Station,Dallas,Texas,South,2018-02-02
+80,Atlanta South Branch,Atlanta,Georgia,South,2013-02-13
+81,New York Plaza,New York,New York,East,2008-02-08
+82,Boston Crossing,Boston,Massachusetts,East,2016-01-26
+83,Miami Downtown,Miami,Florida,East,2021-12-14
+84,Los Angeles Central,Los Angeles,California,West,2007-06-18
+85,San Francisco Mall,San Francisco,California,West,2019-01-28
+86,Seattle Mall,Seattle,Washington,West,2022-10-07
+87,Chicago Market,Chicago,Illinois,North,2014-06-21
+88,Minneapolis Junction,Minneapolis,Minnesota,North,2006-06-05
+89,Dallas South Branch,Dallas,Texas,South,2013-07-24
+90,Atlanta Junction,Atlanta,Georgia,South,2015-07-02
+91,New York Crossing,New York,New York,East,2010-08-22
+92,Boston Crossing,Boston,Massachusetts,East,2005-04-05
+93,Miami Market,Miami,Florida,East,2021-03-02
+94,Los Angeles Downtown,Los Angeles,California,West,2020-04-16
+95,San Francisco Station,San Francisco,California,West,2017-01-16
+96,Seattle Heights,Seattle,Washington,West,2010-12-26
+97,Chicago Heights,Chicago,Illinois,North,2019-05-18
+98,Minneapolis North Branch,Minneapolis,Minnesota,North,2007-07-03
+99,Dallas Superstore,Dallas,Texas,South,2014-10-02
+100,Atlanta Mall,Atlanta,Georgia,South,2015-03-06

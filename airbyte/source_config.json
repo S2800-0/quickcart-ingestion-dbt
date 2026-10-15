@@ -1,0 +1,11 @@
+{
+  "host": "host.docker.internal",
+  "port": 5440,
+  "database": "quickcart_source",
+  "username": "quickcart",
+  "password": "quickcart_demo",
+  "schemas": ["public"],
+  "ssl_mode": {"mode": "disable"},
+  "tunnel_method": {"tunnel_method": "NO_TUNNEL"},
+  "replication_method": {"method": "Standard"}
+}

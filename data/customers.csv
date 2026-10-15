@@ -1,0 +1,101 @@
+customer_id,first_name,last_name,email,phone,city,state,registration_date,loyalty_tier
+1,Jennifer,Flores,jennifer.flores1@email.com,834-899-4945,Fort Worth,Texas,2020-07-31,Gold
+2,Elizabeth,Anderson,elizabeth.anderson2@email.com,853-460-8529,Charlotte,North Carolina,2017-11-11,Gold
+3,James,Robinson,james.robinson3@email.com,893-759-3588,San Jose,California,2015-10-30,Silver
+4,Daniel,Nguyen,daniel.nguyen4@email.com,854-634-5097,San Jose,California,2020-02-15,Bronze
+5,Richard,Harris,richard.harris5@email.com,309-442-7248,San Francisco,California,2021-05-31,Silver
+6,Andrew,Jackson,andrew.jackson6@email.com,222-874-7484,San Jose,California,2018-01-29,Bronze
+7,Andrew,Brown,andrew.brown7@email.com,963-708-5689,Boston,Massachusetts,2023-09-13,Bronze
+8,Joshua,Thompson,joshua.thompson8@email.com,851-394-5106,San Diego,California,2022-08-08,Platinum
+9,George,Rodriguez,george.rodriguez9@email.com,842-861-1645,Houston,Texas,2018-06-19,Silver
+10,John,Nguyen,john.nguyen10@email.com,949-334-2476,Jacksonville,Florida,2025-03-14,Bronze
+11,Christopher,Clark,christopher.clark11@email.com,405-335-9837,Philadelphia,Pennsylvania,2024-10-29,Silver
+12,Kimberly,Allen,kimberly.allen12@email.com,368-463-8894,Dallas,Texas,2025-11-06,Bronze
+13,Melissa,Perez,melissa.perez13@email.com,679-277-3306,Houston,Texas,2023-06-17,Bronze
+14,Carol,Sanchez,carol.sanchez14@email.com,574-292-7464,Seattle,Washington,2015-02-27,Bronze
+15,Paul,Davis,paul.davis15@email.com,577-888-5295,Charlotte,North Carolina,2021-07-22,Silver
+16,Kenneth,White,kenneth.white16@email.com,891-439-8724,Houston,Texas,2015-04-13,Gold
+17,Emily,Lee,emily.lee17@email.com,426-863-2035,Boston,Massachusetts,2022-02-15,Silver
+18,Brian,Martin,brian.martin18@email.com,319-343-1742,Columbus,Ohio,2025-08-11,Bronze
+19,Karen,Young,karen.young19@email.com,299-440-9807,Houston,Texas,2016-07-09,Silver
+20,Sandra,White,sandra.white20@email.com,629-801-3531,Seattle,Washington,2024-12-05,Silver
+21,Dorothy,Miller,dorothy.miller21@email.com,830-617-5583,San Francisco,California,2015-05-15,Gold
+22,Lisa,Wilson,lisa.wilson22@email.com,655-441-6942,Charlotte,North Carolina,2016-02-11,Gold
+23,Lisa,Wright,lisa.wright23@email.com,262-607-5520,Jacksonville,Florida,2017-02-16,Bronze
+24,Sandra,Garcia,sandra.garcia24@email.com,857-854-1349,San Antonio,Texas,2015-07-27,Silver
+25,Jessica,Rodriguez,jessica.rodriguez25@email.com,410-270-4394,Denver,Colorado,2021-07-29,Bronze
+26,Joseph,Perez,joseph.perez26@email.com,810-202-5542,Phoenix,Arizona,2024-08-17,Bronze
+27,William,Wright,william.wright27@email.com,378-312-1422,Dallas,Texas,2016-06-23,Bronze
+28,Daniel,Thomas,daniel.thomas28@email.com,531-216-3854,Denver,Colorado,2017-12-22,Bronze
+29,William,Clark,william.clark29@email.com,316-963-2041,Indianapolis,Indiana,2020-05-04,Silver
+30,Deborah,White,deborah.white30@email.com,807-311-8405,Indianapolis,Indiana,2020-08-25,Bronze
+31,Michelle,Williams,michelle.williams31@email.com,508-669-1510,Indianapolis,Indiana,2015-09-07,Silver
+32,Betty,Ramirez,betty.ramirez32@email.com,702-929-8267,Houston,Texas,2015-10-29,Bronze
+33,Christopher,Hill,christopher.hill33@email.com,267-329-5505,Phoenix,Arizona,2022-01-01,Gold
+34,Donna,Scott,donna.scott34@email.com,590-811-9692,Austin,Texas,2018-04-22,Silver
+35,Steven,Hill,steven.hill35@email.com,301-918-2874,Columbus,Ohio,2024-07-25,Gold
+36,Dorothy,Scott,dorothy.scott36@email.com,640-662-4743,San Antonio,Texas,2019-08-22,Silver
+37,Sandra,Sanchez,sandra.sanchez37@email.com,947-297-6120,Columbus,Ohio,2019-10-15,Silver
+38,Kevin,Taylor,kevin.taylor38@email.com,356-903-8770,Jacksonville,Florida,2015-10-02,Bronze
+39,Jennifer,Garcia,jennifer.garcia39@email.com,298-962-7105,Columbus,Ohio,2024-02-08,Bronze
+40,Emily,Brown,emily.brown40@email.com,775-775-6400,Denver,Colorado,2022-07-07,Bronze
+41,Anthony,Thompson,anthony.thompson41@email.com,938-252-5712,Columbus,Ohio,2021-09-25,Bronze
+42,Daniel,Miller,daniel.miller42@email.com,719-417-3535,Denver,Colorado,2022-05-13,Silver
+43,Joseph,Miller,joseph.miller43@email.com,769-576-2882,Jacksonville,Florida,2023-07-21,Bronze
+44,Andrew,Anderson,andrew.anderson44@email.com,774-985-1430,Columbus,Ohio,2021-10-30,Gold
+45,Brian,Moore,brian.moore45@email.com,384-479-6062,New York,New York,2025-05-02,Silver
+46,Daniel,Smith,daniel.smith46@email.com,346-779-7566,Philadelphia,Pennsylvania,2015-10-13,Bronze
+47,Melissa,Johnson,melissa.johnson47@email.com,964-743-4524,Chicago,Illinois,2019-03-21,Silver
+48,Sandra,Perez,sandra.perez48@email.com,578-519-6314,Philadelphia,Pennsylvania,2023-09-17,Gold
+49,Joshua,Garcia,joshua.garcia49@email.com,359-361-1815,Los Angeles,California,2022-07-23,Bronze
+50,Sarah,Lewis,sarah.lewis50@email.com,697-821-8242,Columbus,Ohio,2019-08-24,Bronze
+51,Susan,Allen,susan.allen51@email.com,553-640-2816,Houston,Texas,2018-03-06,Gold
+52,Carol,Nguyen,carol.nguyen52@email.com,739-883-6053,San Francisco,California,2015-07-06,Bronze
+53,Betty,Hill,betty.hill53@email.com,207-409-5938,Los Angeles,California,2025-08-08,Bronze
+54,Deborah,Rodriguez,deborah.rodriguez54@email.com,496-535-2965,Dallas,Texas,2015-02-01,Silver
+55,Melissa,Ramirez,melissa.ramirez55@email.com,332-589-9725,Philadelphia,Pennsylvania,2022-11-22,Bronze
+56,Steven,Scott,steven.scott56@email.com,273-606-1693,Jacksonville,Florida,2019-11-22,Bronze
+57,Sandra,Jones,sandra.jones57@email.com,789-639-7626,Austin,Texas,2022-12-16,Gold
+58,Anthony,Jackson,anthony.jackson58@email.com,614-221-6321,Houston,Texas,2016-12-04,Gold
+59,Sandra,White,sandra.white59@email.com,647-308-4986,Chicago,Illinois,2019-11-20,Gold
+60,Betty,King,betty.king60@email.com,605-517-6562,Chicago,Illinois,2017-06-26,Silver
+61,Deborah,Hernandez,deborah.hernandez61@email.com,722-848-2868,Chicago,Illinois,2020-12-13,Silver
+62,Richard,Thompson,richard.thompson62@email.com,944-860-3419,Jacksonville,Florida,2017-08-25,Bronze
+63,Elizabeth,Taylor,elizabeth.taylor63@email.com,377-816-3504,San Antonio,Texas,2023-07-11,Platinum
+64,Dorothy,Jones,dorothy.jones64@email.com,991-843-9095,Philadelphia,Pennsylvania,2020-03-15,Platinum
+65,Andrew,Nguyen,andrew.nguyen65@email.com,897-778-6295,Charlotte,North Carolina,2024-09-09,Gold
+66,Christopher,Martinez,christopher.martinez66@email.com,269-680-8245,Charlotte,North Carolina,2022-01-30,Bronze
+67,Sarah,Nguyen,sarah.nguyen67@email.com,560-719-2215,Los Angeles,California,2018-06-25,Silver
+68,Mark,Williams,mark.williams68@email.com,577-493-2257,Los Angeles,California,2022-03-25,Bronze
+69,Michelle,Hill,michelle.hill69@email.com,593-673-1672,Indianapolis,Indiana,2020-01-17,Gold
+70,Dorothy,Gonzalez,dorothy.gonzalez70@email.com,819-687-9214,Austin,Texas,2016-09-09,Bronze
+71,Mark,Miller,mark.miller71@email.com,931-286-9266,Austin,Texas,2022-03-31,Bronze
+72,John,Thomas,john.thomas72@email.com,649-736-9564,Charlotte,North Carolina,2021-11-02,Bronze
+73,Lisa,White,lisa.white73@email.com,596-618-6543,San Jose,California,2022-08-12,Gold
+74,Patricia,Perez,patricia.perez74@email.com,537-296-7333,Chicago,Illinois,2018-03-09,Bronze
+75,George,Hill,george.hill75@email.com,541-283-3317,Phoenix,Arizona,2025-04-12,Silver
+76,Karen,Sanchez,karen.sanchez76@email.com,809-925-2388,Phoenix,Arizona,2018-06-22,Gold
+77,Matthew,Perez,matthew.perez77@email.com,886-919-9624,Phoenix,Arizona,2016-01-18,Gold
+78,Kevin,Ramirez,kevin.ramirez78@email.com,570-218-6940,Indianapolis,Indiana,2018-06-19,Bronze
+79,Susan,Perez,susan.perez79@email.com,396-431-3253,San Francisco,California,2016-09-26,Bronze
+80,Charles,Miller,charles.miller80@email.com,989-752-9626,Indianapolis,Indiana,2015-06-04,Gold
+81,Nancy,Flores,nancy.flores81@email.com,811-585-3527,Phoenix,Arizona,2016-10-26,Bronze
+82,Brian,Flores,brian.flores82@email.com,938-648-1715,Philadelphia,Pennsylvania,2019-08-10,Silver
+83,Carol,Thomas,carol.thomas83@email.com,825-491-8355,Charlotte,North Carolina,2017-08-16,Silver
+84,Jessica,Martin,jessica.martin84@email.com,398-576-8218,San Francisco,California,2020-03-06,Platinum
+85,Charles,Harris,charles.harris85@email.com,740-628-3655,Indianapolis,Indiana,2024-02-28,Bronze
+86,Joshua,Rodriguez,joshua.rodriguez86@email.com,253-856-8873,Dallas,Texas,2024-10-20,Silver
+87,Emily,Miller,emily.miller87@email.com,327-491-2374,Indianapolis,Indiana,2023-07-23,Bronze
+88,Sarah,Lewis,sarah.lewis88@email.com,350-647-2502,Indianapolis,Indiana,2025-08-12,Bronze
+89,Mark,Thompson,mark.thompson89@email.com,624-254-7495,New York,New York,2020-08-18,Silver
+90,Jessica,Harris,jessica.harris90@email.com,583-429-1461,Chicago,Illinois,2018-07-29,Bronze
+91,Amanda,Perez,amanda.perez91@email.com,340-239-5700,Phoenix,Arizona,2025-04-15,Silver
+92,Brian,Rodriguez,brian.rodriguez92@email.com,659-830-1086,San Francisco,California,2025-02-27,Bronze
+93,Mary,Taylor,mary.taylor93@email.com,353-761-9647,San Antonio,Texas,2019-09-30,Bronze
+94,Deborah,Jackson,deborah.jackson94@email.com,508-324-1782,San Diego,California,2017-09-03,Silver
+95,Kenneth,Flores,kenneth.flores95@email.com,264-313-9189,Charlotte,North Carolina,2021-09-10,Silver
+96,Mary,Allen,mary.allen96@email.com,447-935-3352,Denver,Colorado,2018-04-08,Silver
+97,James,Flores,james.flores97@email.com,446-784-7825,Jacksonville,Florida,2017-02-06,Gold
+98,Kevin,Garcia,kevin.garcia98@email.com,569-269-9618,Indianapolis,Indiana,2021-02-06,Silver
+99,Steven,Scott,steven.scott99@email.com,599-681-1713,New York,New York,2022-02-16,Silver
+100,Lisa,Taylor,lisa.taylor100@email.com,565-269-6649,New York,New York,2017-09-14,Platinum

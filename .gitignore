@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.DS_Store
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+airbyte/state.json
+airbyte/configured_catalog.json
+airbyte/destination_catalog.json
+dbt/.user.yml

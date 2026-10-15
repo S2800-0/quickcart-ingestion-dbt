@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: One row per order with units, items revenue, shipping and total revenue.
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]
+      - name: order_revenue
+        data_tests: [not_null]
+  - name: fct_order_items
+    description: One row per order line with revenue, cost and margin.
+    columns:
+      - name: order_item_id
+        data_tests: [unique, not_null]
+  - name: dim_customers
+    description: One row per customer with lifetime orders and revenue (cancelled orders excluded).
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+  - name: sales_by_store_month
+    description: Revenue per store per month.
+  - name: product_performance
+    description: Units, revenue and margin per product.
+    columns:
+      - name: product_id
+        data_tests: [unique, not_null]

@@ -1,0 +1,15 @@
+{
+  "host": "host.docker.internal",
+  "port": 5440,
+  "database": "quickcart_warehouse",
+  "schema": "airbyte_raw",
+  "username": "quickcart",
+  "password": "quickcart_demo",
+  "ssl_mode": {
+    "mode": "disable"
+  },
+  "tunnel_method": {
+    "tunnel_method": "NO_TUNNEL"
+  },
+  "drop_cascade": true
+}

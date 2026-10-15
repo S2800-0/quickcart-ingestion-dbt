@@ -1,0 +1,101 @@
+product_id,product_name,category,subcategory,unit_price,cost_price,supplier,stock_quantity
+1,Water Blaster #1,Toys & Games,Outdoor Toys,93.72,61.6,KidsJoy Supply,68
+2,ClearTone #2,Electronics,Headphones,540.89,338.04,CircuitWorks,356
+3,Floor Lamp #3,Home & Garden,Lighting,651.08,274.81,DecorPlus,18
+4,Sparkling Water #4,Food,Beverages,32.06,22.76,GourmetGoods,477
+5,Butter #5,Food,Dairy,39.59,23.36,GourmetGoods,18
+6,Fantasy Figure #6,Toys & Games,Action Figures,46.05,31.01,KidsJoy Supply,139
+7,AudioMax #7,Electronics,Headphones,1339.76,884.45,CircuitWorks,173
+8,Relaxed Jeans #8,Clothing,Jeans,82.96,56.33,StyleHouse Co.,410
+9,FlexPad #9,Electronics,Tablets,164.44,100.45,GlobalElectro,279
+10,Canned Tomatoes #10,Food,Canned Goods,5.04,3.18,GourmetGoods,228
+11,Water Shoes #11,Sports & Outdoors,Footwear,108.32,60.16,OutdoorPro,21
+12,Wooden Puzzle #12,Toys & Games,Puzzles,36.57,27.17,PlayTime Co.,38
+13,Sidewalk Chalk Set #13,Toys & Games,Outdoor Toys,46.78,31.83,FunWorks Inc.,487
+14,FlexPro #14,Electronics,Laptops,1033.23,571.75,GlobalElectro,34
+15,Leather Boots #15,Clothing,Shoes,82.0,60.05,Fashion Forward Ltd.,309
+16,Sandals #16,Clothing,Shoes,190.53,101.02,Fashion Forward Ltd.,293
+17,Compression Shirt #17,Clothing,Activewear,88.64,55.61,UrbanThreads,491
+18,Pixel #18,Electronics,Smartphones,773.61,414.23,TechSource Inc.,134
+19,Frozen Waffles #19,Food,Frozen Foods,10.15,6.23,DailyBread Supply,102
+20,UltraBook #20,Electronics,Laptops,705.46,504.08,CircuitWorks,44
+21,3D Puzzle #21,Toys & Games,Puzzles,86.6,51.31,KidsJoy Supply,456
+22,Orange Juice #22,Food,Beverages,32.16,18.59,FreshFarms Co.,102
+23,Wrap Dress #23,Clothing,Women's Dresses,19.86,11.8,StyleHouse Co.,239
+24,Tent #24,Sports & Outdoors,Camping Gear,48.79,26.32,OutdoorPro,269
+25,Pruning Shears #25,Home & Garden,Garden Tools,109.01,55.7,HomeStyle Inc.,230
+26,Pendant Light #26,Home & Garden,Lighting,111.38,76.87,GreenThumb Supply,393
+27,Slim Fit Jeans #27,Clothing,Jeans,168.81,98.14,StyleHouse Co.,84
+28,Denim Jacket #28,Clothing,Jackets,79.01,57.62,StyleHouse Co.,433
+29,BassPro #29,Electronics,Headphones,970.83,575.5,GlobalElectro,320
+30,Whole Milk #30,Food,Dairy,21.1,9.69,PantryPlus,87
+31,Puzzle Game #31,Toys & Games,Video Games,101.89,60.86,PlayTime Co.,41
+32,ViewTab #32,Electronics,Tablets,433.75,205.5,CircuitWorks,316
+33,Chess Set #33,Toys & Games,Board Games,107.23,63.37,KidsJoy Supply,247
+34,Sandals #34,Clothing,Shoes,70.03,29.8,Fashion Forward Ltd.,80
+35,Watering Can #35,Home & Garden,Garden Tools,376.91,195.64,GreenThumb Supply,160
+36,3D Puzzle #36,Toys & Games,Puzzles,117.17,52.23,KidsJoy Supply,263
+37,Resistance Bands #37,Sports & Outdoors,Fitness Equipment,152.63,67.6,OutdoorPro,126
+38,Classic Fit Shirt #38,Clothing,Men's Shirts,68.69,36.71,ApparelWorks,127
+39,Puffer Jacket #39,Clothing,Jackets,50.12,22.84,ApparelWorks,255
+40,Sourdough Bread #40,Food,Bakery,5.42,2.91,DailyBread Supply,494
+41,Cocktail Dress #41,Clothing,Women's Dresses,24.0,11.96,ApparelWorks,146
+42,Dumbbell Set #42,Sports & Outdoors,Fitness Equipment,264.25,187.32,FitLife Inc.,391
+43,Cotton Sheet Set #43,Home & Garden,Bedding,326.46,195.74,GreenThumb Supply,185
+44,Mountain Bike #44,Sports & Outdoors,Bicycles,237.95,132.69,FitLife Inc.,422
+45,Trail Running Shoes #45,Sports & Outdoors,Footwear,85.91,37.27,FitLife Inc.,406
+46,Cheddar Cheese #46,Food,Dairy,30.69,14.41,DailyBread Supply,256
+47,Galaxy #47,Electronics,Smartphones,248.7,128.47,CircuitWorks,265
+48,Knife Set #48,Home & Garden,Kitchenware,269.09,165.38,GreenThumb Supply,201
+49,Cleats #49,Sports & Outdoors,Footwear,360.3,208.09,OutdoorPro,362
+50,Kids Bike #50,Sports & Outdoors,Bicycles,491.29,259.86,ActiveGear Co.,213
+51,Mountain Bike #51,Sports & Outdoors,Bicycles,362.18,178.53,TrailBlazer Supply,369
+52,PixelPro #52,Electronics,Televisions,297.24,184.34,CircuitWorks,75
+53,Superhero Figure #53,Toys & Games,Action Figures,70.85,45.71,FunWorks Inc.,9
+54,Duvet Cover #54,Home & Garden,Bedding,129.63,83.18,DecorPlus,256
+55,Soccer Ball #55,Sports & Outdoors,Team Sports,426.41,247.97,FitLife Inc.,339
+56,Picture Frame #56,Home & Garden,Decor,257.86,118.77,CozyLiving Co.,279
+57,Frozen Vegetables #57,Food,Frozen Foods,25.18,11.77,PantryPlus,142
+58,Road Bike #58,Sports & Outdoors,Bicycles,565.48,420.6,FitLife Inc.,360
+59,Sandals #59,Clothing,Shoes,73.65,38.45,StyleHouse Co.,147
+60,HomeCinema #60,Electronics,Televisions,600.56,446.25,NovaTech Supply,488
+61,Bomber Jacket #61,Clothing,Jackets,68.21,44.33,StyleHouse Co.,473
+62,Pendant Light #62,Home & Garden,Lighting,600.4,285.13,CozyLiving Co.,477
+63,Cleats #63,Sports & Outdoors,Footwear,90.99,56.0,TrailBlazer Supply,124
+64,ViewTab #64,Electronics,Tablets,377.22,181.63,TechSource Inc.,211
+65,Frozen Waffles #65,Food,Frozen Foods,5.82,3.9,FreshFarms Co.,493
+66,Backpack #66,Sports & Outdoors,Camping Gear,395.21,279.9,OutdoorPro,244
+67,Fantasy Figure #67,Toys & Games,Action Figures,41.93,26.25,PlayTime Co.,333
+68,Tent #68,Sports & Outdoors,Camping Gear,548.81,253.15,TrailBlazer Supply,478
+69,ClickPro #69,Electronics,Cameras,320.15,211.99,NovaTech Supply,448
+70,Nova #70,Electronics,Smartphones,873.54,382.22,NovaTech Supply,145
+71,String Lights #71,Home & Garden,Lighting,712.52,318.48,DecorPlus,139
+72,Flannel Shirt #72,Clothing,Men's Shirts,45.06,25.26,StyleHouse Co.,367
+73,Flannel Shirt #73,Clothing,Men's Shirts,161.29,96.57,UrbanThreads,89
+74,Water Shoes #74,Sports & Outdoors,Footwear,497.92,288.97,ActiveGear Co.,205
+75,Family Board Game #75,Toys & Games,Board Games,117.89,66.86,FunWorks Inc.,3
+76,Croissant #76,Food,Bakery,18.98,9.37,GourmetGoods,154
+77,Trail Running Shoes #77,Sports & Outdoors,Footwear,164.32,86.41,TrailBlazer Supply,31
+78,Chess Set #78,Toys & Games,Board Games,40.28,21.83,KidsJoy Supply,353
+79,AirTab #79,Electronics,Tablets,582.94,278.24,GlobalElectro,244
+80,Skinny Jeans #80,Clothing,Jeans,91.93,54.44,ApparelWorks,387
+81,Hiking Boots #81,Sports & Outdoors,Footwear,459.5,293.22,ActiveGear Co.,269
+82,Throw Pillow #82,Home & Garden,Decor,71.7,42.84,HomeStyle Inc.,424
+83,Yoga Block #83,Sports & Outdoors,Yoga,347.89,157.4,FitLife Inc.,437
+84,Soccer Ball #84,Sports & Outdoors,Team Sports,411.37,267.77,OutdoorPro,46
+85,Soccer Ball #85,Sports & Outdoors,Team Sports,277.53,160.87,OutdoorPro,288
+86,PixelPro #86,Electronics,Televisions,1025.51,520.81,TechSource Inc.,202
+87,Trail Mix #87,Food,Snacks,23.98,9.97,GourmetGoods,358
+88,VisionMax #88,Electronics,Televisions,1405.15,596.0,CircuitWorks,16
+89,Croissant #89,Food,Bakery,31.22,20.86,DailyBread Supply,191
+90,Watering Can #90,Home & Garden,Garden Tools,306.76,196.01,GreenThumb Supply,334
+91,Trail Mix #91,Food,Snacks,39.73,21.36,PantryPlus,372
+92,Classic Fit Shirt #92,Clothing,Men's Shirts,196.02,110.17,ApparelWorks,272
+93,Knife Set #93,Home & Garden,Kitchenware,373.89,169.86,GreenThumb Supply,479
+94,Strategy Board Game #94,Toys & Games,Board Games,98.09,53.63,PlayTime Co.,123
+95,Classic Fit Shirt #95,Clothing,Men's Shirts,124.88,69.47,Fashion Forward Ltd.,125
+96,Chess Set #96,Toys & Games,Board Games,55.48,32.67,PlayTime Co.,71
+97,Road Bike #97,Sports & Outdoors,Bicycles,491.31,322.31,FitLife Inc.,295
+98,Cleats #98,Sports & Outdoors,Footwear,149.77,105.84,TrailBlazer Supply,211
+99,Canned Tomatoes #99,Food,Canned Goods,23.16,14.06,PantryPlus,320
+100,Coding Robot Kit #100,Toys & Games,Educational Toys,10.39,5.41,GameCraft,402

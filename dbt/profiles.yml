@@ -1,0 +1,14 @@
+# Connection to the warehouse database. Values come from the environment, with the
+# local demo defaults used by setup_source.sh.
+quickcart:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('DBT_HOST', 'localhost') }}"
+      port: "{{ env_var('DBT_PORT', '5440') | as_number }}"
+      user: "{{ env_var('DBT_USER', 'quickcart') }}"
+      password: "{{ env_var('DBT_PASSWORD', 'quickcart_demo') }}"
+      dbname: quickcart_warehouse
+      schema: analytics
+      threads: 4
