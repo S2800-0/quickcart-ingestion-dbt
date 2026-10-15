@@ -1,0 +1,26 @@
+$ snow sql -c fivetran_check   # as FIVETRAN_USER, role FIVETRAN_ROLE
+select table_schema, table_name, row_count from FIVETRAN_DATABASE.information_schema.tables
++----------------------------------------------------+
+| TABLE_SCHEMA          | TABLE_NAME     | ROW_COUNT |
+|-----------------------+----------------+-----------|
+| NEON_CLASSROOM_PUBLIC | CUSTOMERS      | 100       |
+| NEON_CLASSROOM_PUBLIC | EMPLOYEES      | 100       |
+| NEON_CLASSROOM_PUBLIC | ORDERS         | 100       |
+| NEON_CLASSROOM_PUBLIC | ORDER_ITEMS    | 100       |
+| NEON_CLASSROOM_PUBLIC | PRODUCTS       | 100       |
+| NEON_CLASSROOM_PUBLIC | STORES         | 100       |
+| NEON_CLASSROOM_PUBLIC | STUDENT_ORDERS | 3         |
++----------------------------------------------------+
+
+SELECT * FROM FIVETRAN_DATABASE.NEON_CLASSROOM_PUBLIC.STUDENT_ORDERS ORDER BY ORDER_ID
++-------------------------------------------------------------------+
+| ORDER_ID | CUSTOMER_NAME | PRODUCT  | ORDER_AMOUNT | ORDER_STATUS |
+|----------+---------------+----------+--------------+--------------|
+| 1        | Mona          | Keyboard | 45.00        | completed    |
+| 2        | Omar          | Monitor  | 180.00       | completed    |
+| 3        | Salma         | Mouse    | 22.50        | pending      |
++-------------------------------------------------------------------+
+
+Same checks on both sides
+Snowflake:  orders=100  shipping_total=500.29  order_items=100  items_total=72687.24
+Neon:       orders=100  shipping_total=500.29  order_items=100  items_total=72687.24

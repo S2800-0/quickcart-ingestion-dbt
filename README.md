@@ -4,6 +4,7 @@ QuickCart is a growing e-commerce company that needs an ingestion strategy. This
 
 1. A one page recommendation for the CTO: **Fivetran or Airbyte Open Source** (`docs/QuickCart_Ingestion_Recommendation.docx`).
 2. A working proof of the recommended design: Airbyte's PostgreSQL connectors move data from a source database to a warehouse, and dbt turns the raw tables into tested reporting tables.
+3. The cloud lab from the course manuals, run for real: **Neon PostgreSQL to Fivetran to Snowflake**, with the same dbt project running on Snowflake (see "Cloud run" below).
 
 ## The recommendation in short
 
@@ -84,7 +85,39 @@ cd dbt && DBT_PROFILES_DIR=$PWD ../.venv/bin/dbt docs generate && DBT_PROFILES_D
 
 The database passwords in this repo are throwaway values for a local Docker container.
 
-## Results
+## Cloud run: Neon, Fivetran and Snowflake
+
+The Fivetran manual was run end to end with real accounts.
+
+```
+Neon PostgreSQL  ->  Fivetran (query based sync)  ->  Snowflake FIVETRAN_DATABASE  ->  dbt (target: snowflake)
+7 tables                                              schema NEON_CLASSROOM_PUBLIC       staging, marts, 40 tests
+```
+
+| Step | What was done |
+|---|---|
+| Neon | Project `modern-data-stack-lab`. The manual's `student_orders` table plus the six course tables (`sql/01_source_schema.sql`). |
+| Snowflake | Role, service user, XSMALL warehouse (suspends after 60 seconds) and database from the manual, with key pair login (`sql/03_snowflake_fivetran_setup.sql`). |
+| Fivetran | PostgreSQL source `neon_classroom` (direct connection), Snowflake destination (key pair, native tables), initial sync of all 7 tables. |
+| Check | Snowflake rows match Neon: 100 orders, 100 order lines, shipping total 500.29, line total 72687.24, and the 3 `student_orders` rows. |
+| Incremental | 5 orders and 7 lines added to Neon, Fivetran synced again, Snowflake went to 105 orders and 107 lines with no duplicates. Only the new rows have a new `_fivetran_synced` time. |
+| dbt | `dbt build --target snowflake`: 40 of 40 pass on Snowflake, and the same 40 pass on PostgreSQL. |
+
+To run dbt on Snowflake, keep the private key outside the repo and point `SNOWFLAKE_PRIVATE_KEY_PATH` at it (default `~/.quickcart_keys/rsa_key.p8`):
+
+```bash
+cd dbt && DBT_PROFILES_DIR=$PWD ../.venv/bin/dbt build --target snowflake
+```
+
+![Fivetran destination](screenshots/08_fivetran_snowflake_destination.png)
+
+![Fivetran sync](screenshots/09_fivetran_successful_sync.png)
+
+![Snowflake matches Neon](screenshots/10_snowflake_verification.png)
+
+![Second sync and dbt on Snowflake](screenshots/11_snowflake_incremental_and_dbt.png)
+
+## Results (local Airbyte run)
 
 First run, empty warehouse: 603 records loaded and 40 of 40 dbt checks passed.
 
@@ -116,11 +149,18 @@ Raw logs are in `evidence/`.
 - **Table swap failed because of dbt views.** Replacing a raw table failed while the staging views depended on it. The destination is set to `drop_cascade`, and dbt recreates the views right after in the same run.
 - **State for full refresh tables.** Like the platform, `sync.py` keeps state only for incremental tables.
 
+## Problems found in the cloud run
+
+- **Wrong Fivetran form.** The first form opened was Fivetran's Snowflake *connector*, which reads from Snowflake. The pipeline needs PostgreSQL as the source and Snowflake as the destination.
+- **Table type.** Fivetran defaulted the destination to Lakehouse Tables (Beta). The manual uses Snowflake Native Tables.
+- **Snowflake CLI key login failed.** The personal user is stored in lowercase and the CLI capitalises the name when signing a key token, so it was rejected. The checks use the capitalised service user `FIVETRAN_USER` instead.
+- **Fivetran display.** The sync page showed 0 loaded rows right after the first sync, but Snowflake already held all the rows. The page lagged behind.
+
 ## Limits
 
-- The warehouse is PostgreSQL, not Snowflake, and the source is a local container, not Neon, because those need cloud accounts. Pointing the connectors and dbt at Neon and Snowflake means changing the two config files in `airbyte/` and `dbt/profiles.yml`.
-- The Fivetran manual was not run. It needs a Fivetran account.
+- The local Airbyte run uses PostgreSQL as the warehouse. The cloud run uses Fivetran, because the Fivetran manual was the one run on real accounts. The Airbyte Cloud manual was not run. Pointing the Airbyte connectors at Neon and Snowflake would mainly change the two config files in `airbyte/`.
 - The custom inventory API in the brief has no documentation and no access, so it is covered in the recommendation but not built.
+- Fivetran's soft delete columns (`_fivetran_deleted`) are not used in the staging models, because the demo data has no deletes.
 - The data is 100 rows per table, so this proves the design, not the 80M updates a month volume.
 - A cursor based incremental sync does not see deleted rows. Log based change capture would, and it is the next step if deletes matter.
 
@@ -130,7 +170,7 @@ Raw logs are in `evidence/`.
 airbyte/          connector configs and sync.py
 dbt/              dbt project (models, tests, macros, profiles)
 data/             the six CSV files
-sql/              source schema and the new orders script
+sql/              source schema, the new orders script and the Snowflake setup
 docs/             the recommendation
 evidence/         raw logs of the runs
 screenshots/      images used above

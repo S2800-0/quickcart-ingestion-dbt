@@ -12,3 +12,16 @@ quickcart:
       dbname: quickcart_warehouse
       schema: analytics
       threads: 4
+
+    # The same models on Snowflake, reading the tables Fivetran loaded from Neon.
+    # Key pair login for the FIVETRAN_USER service user created in sql/03_snowflake_fivetran_setup.sql.
+    snowflake:
+      type: snowflake
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT', 'srsbxdh-uf12982') }}"
+      user: FIVETRAN_USER
+      private_key_path: "{{ env_var('SNOWFLAKE_PRIVATE_KEY_PATH', env_var('HOME') ~ '/.quickcart_keys/rsa_key.p8') }}"
+      role: FIVETRAN_ROLE
+      warehouse: FIVETRAN_WAREHOUSE
+      database: FIVETRAN_DATABASE
+      schema: ANALYTICS
+      threads: 4
